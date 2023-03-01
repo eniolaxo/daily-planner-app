@@ -14,34 +14,17 @@ localStorage.setItem (hours, textArea);
 
 
 // Present timeblocks for standard business hours when the user scrolls down.
-// maybe I should make a for each loop going through all the hours instead of one-by-one, to be efficient
+// Made a array variable of all the hours to make it more efficient and quicker to code through
+var hoursArray = ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
-var nineAm = localStorage.getItem("9am")
-$("#9am").val(nineAm)
+// Looping through the hours array and get the value from local storage for each hour
+hoursArray.forEach(function(hour) {
+  var value = localStorage.getItem(hour);
+  // This targets the hour id
+  $("#" + hour).val(value);
+});
 
-var tenAm = localStorage.getItem("10am")
-$("#10am").val(tenAm)
 
-var elevenAm = localStorage.getItem("11am")
-$("#11am").val(elevenAm)
-
-var twelveAm = localStorage.getItem("12am")
-$("#12am").val(twelveAm)
-
-var onePm = localStorage.getItem("1pm")
-$("#1pm").val(onePm)
-
-var twoPm = localStorage.getItem("2pm")
-$("#2pm").val(twoPm)
-
-var threePm = localStorage.getItem("3pm")
-$("#3pm").val(threePm)
-
-var fourPm = localStorage.getItem("4pm")
-$("#4pm").val(fourPm)#
-
-var fivePm = localStorage.getItem("5pm")
-$("#5pm").val(fivePm)
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
 
