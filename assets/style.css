@@ -42,21 +42,21 @@ textarea {
   border-top: 1px dashed #000000;
 }
 
-/* red background colour for past*/
+/* grey background colour for past*/
 .past {
-  background-color: #b04343;
+  background-color: #a7a7a7;
   color: white;
 }
 
-/* green background colour for present*/
+/* red background colour for present*/
 .present {
-  background-color: #319647;
+  background-color: #cc3131;
   color: white;
 }
 
-/* grey background colour for future*/
+/* green background colour for future*/
 .future {
-  background-color: #a19595;
+  background-color: #5db83f;
   color: white;
 }
 
