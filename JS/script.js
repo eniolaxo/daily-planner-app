@@ -16,14 +16,24 @@ localStorage.setItem (time, textArea);
 // Present timeblocks for standard business hours when the user scrolls down:
 // Defining variables for each of the time blocks in the HTML
 function currentTime(){
-var currentHour = moment().hours();
-$(".time-block").each(function(){
-  var past = parseInt($(this).attr("id").split("-")[1])
-  // makea conditional (if statement) to check my time
-})
+  var currentHour = moment().hours();
+  $(".time-block").each(function(){
+    var past = parseInt($(this).attr("id").split("-")[1]);
+
+    if (past < currentHour) {
+      $(this).addClass("past");
+    } else if (past === currentHour) {
+      $(this).addClass("present");
+    } else {
+      $(this).addClass("future");
+    }
+  });
 }
 
-currentTime()
+currentTime();
+
+
+
 // create an applied timer and call out the function
 
 
