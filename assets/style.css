@@ -44,19 +44,19 @@ textarea {
 
 /* red background colour for past*/
 .past {
-  background-color: #9c0000;
+  background-color: #b04343;
   color: white;
 }
 
 /* green background colour for present*/
 .present {
-  background-color: #079025;
+  background-color: #319647;
   color: white;
 }
 
 /* grey background colour for future*/
 .future {
-  background-color: #565656;
+  background-color: #a19595;
   color: white;
 }
 

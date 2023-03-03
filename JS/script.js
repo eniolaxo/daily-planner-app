@@ -29,22 +29,16 @@ function currentTime(){
     }
   });
 }
-
 currentTime();
 
 
-
-// create an applied timer and call out the function
-
-
-
-// Color-code each timeblock based on past, present, and future when the timeblock is viewed:
-// I need to define the current hour as of now:
-var timeNow = moment().hour();
-
-// Allow a user to enter an event when they click a timeblock
-
 // Save the event in local storage when the save button is clicked in that timeblock.
+$(".time-block").each(function() {
+  var time = $(this).attr("id");
+  var event = localStorage.getItem(time);
+  if (event !== null) {
+    $(this).children(".description").val(event);
+  }
+});
 
-// Persist events between refreshes of a page
 })
